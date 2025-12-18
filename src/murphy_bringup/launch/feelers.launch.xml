@@ -1,0 +1,50 @@
+<launch>
+
+  <!-- RealSense -->
+  <node pkg="realsense2_camera"
+        exec="realsense2_camera_node"
+        output="screen">
+  </node>
+
+  <!-- RPLIDAR -->
+  <node pkg="rplidar_ros"
+      exec="rplidar_node"
+      name="rplidar"
+      output="screen">
+      <param name="serial_port" value="/dev/ttyUSB0"/>
+      <param name="serial_baudrate" value="256000"/>
+      <param name="channel_type" value="serial"/>
+      <param name="frame_id" value="laser"/>
+      <param name="angle_compensate" value="true"/>
+  </node>
+
+  <!-- Masks -->
+  <node pkg="murphy_vision_rs"
+        exec="depth_to_mask"
+        output="screen"
+        emulate_tty="true"/>
+
+  <node pkg="murphy_lidar_mask"
+        exec="scan_to_mask"
+        output="screen"
+        emulate_tty="true"/>
+
+  <node pkg="murphy_mask_fusion"
+        exec="fuse_masks"
+        output="screen"
+        emulate_tty="true"/>
+
+  <!-- Feelers -->
+  <node pkg="murphy_feelers"
+        exec="feeler_node"
+        output="screen"/>
+
+  <node pkg="tf2_ros"
+      exec="static_transform_publisher"
+      args="0.20 0.0 0.15 0 0 0 base_link camera_link" />
+
+  <node pkg="tf2_ros"
+      exec="static_transform_publisher"
+      args="0.0 0.0 0.10 0 0 0 base_link laser" />
+
+</launch>
