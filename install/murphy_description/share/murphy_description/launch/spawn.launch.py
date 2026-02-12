@@ -1,1 +1,0 @@
-/home/soap/probes/murphy/src/murphy_description/launch/spawn.launch.py

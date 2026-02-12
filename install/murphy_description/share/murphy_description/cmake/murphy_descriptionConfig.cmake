@@ -1,1 +1,0 @@
-/home/soap/probes/murphy/build/murphy_description/ament_cmake_core/murphy_descriptionConfig.cmake
