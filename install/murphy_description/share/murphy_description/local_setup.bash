@@ -1,0 +1,1 @@
+/home/soap/probes/murphy/build/murphy_description/ament_cmake_environment_hooks/local_setup.bash

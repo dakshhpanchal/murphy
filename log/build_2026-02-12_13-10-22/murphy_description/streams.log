@@ -1,0 +1,24 @@
+[0.007s] Invoking command in '/home/soap/probes/murphy/build/murphy_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/soap/probes/murphy/build/murphy_description -- -j28 -l28
+[0.038s] Invoked command in '/home/soap/probes/murphy/build/murphy_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/soap/probes/murphy/build/murphy_description -- -j28 -l28
+[0.045s] Invoking command in '/home/soap/probes/murphy/build/murphy_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/soap/probes/murphy/build/murphy_description
+[0.050s] -- Install configuration: ""
+[0.050s] -- Execute custom install script
+[0.051s] -- Up-to-date symlink: /home/soap/probes/murphy/install/murphy_description/share/murphy_description/urdf/murphy.urdf.xacro
+[0.051s] -- Up-to-date symlink: /home/soap/probes/murphy/install/murphy_description/share/murphy_description/launch/spawn.launch.py
+[0.051s] -- Up-to-date symlink: /home/soap/probes/murphy/install/murphy_description/share/murphy_description/launch/spawn.launch.xml
+[0.051s] -- Up-to-date symlink: /home/soap/probes/murphy/install/murphy_description/share/ament_index/resource_index/package_run_dependencies/murphy_description
+[0.051s] -- Up-to-date symlink: /home/soap/probes/murphy/install/murphy_description/share/ament_index/resource_index/parent_prefix_path/murphy_description
+[0.051s] -- Up-to-date symlink: /home/soap/probes/murphy/install/murphy_description/share/murphy_description/environment/ament_prefix_path.sh
+[0.051s] -- Up-to-date symlink: /home/soap/probes/murphy/install/murphy_description/share/murphy_description/environment/ament_prefix_path.dsv
+[0.051s] -- Up-to-date symlink: /home/soap/probes/murphy/install/murphy_description/share/murphy_description/environment/path.sh
+[0.051s] -- Up-to-date symlink: /home/soap/probes/murphy/install/murphy_description/share/murphy_description/environment/path.dsv
+[0.051s] -- Up-to-date symlink: /home/soap/probes/murphy/install/murphy_description/share/murphy_description/local_setup.bash
+[0.052s] -- Up-to-date symlink: /home/soap/probes/murphy/install/murphy_description/share/murphy_description/local_setup.sh
+[0.052s] -- Up-to-date symlink: /home/soap/probes/murphy/install/murphy_description/share/murphy_description/local_setup.zsh
+[0.052s] -- Up-to-date symlink: /home/soap/probes/murphy/install/murphy_description/share/murphy_description/local_setup.dsv
+[0.052s] -- Symlinking: /home/soap/probes/murphy/install/murphy_description/share/murphy_description/package.dsv
+[0.058s] -- Up-to-date symlink: /home/soap/probes/murphy/install/murphy_description/share/ament_index/resource_index/packages/murphy_description
+[0.058s] -- Up-to-date symlink: /home/soap/probes/murphy/install/murphy_description/share/murphy_description/cmake/murphy_descriptionConfig.cmake
+[0.059s] -- Up-to-date symlink: /home/soap/probes/murphy/install/murphy_description/share/murphy_description/cmake/murphy_descriptionConfig-version.cmake
+[0.059s] -- Up-to-date symlink: /home/soap/probes/murphy/install/murphy_description/share/murphy_description/package.xml
+[0.060s] Invoked command in '/home/soap/probes/murphy/build/murphy_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/soap/probes/murphy/build/murphy_description
