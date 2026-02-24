@@ -10,14 +10,28 @@ def generate_launch_description():
 
     pkg_path = get_package_share_directory('murphy_description')
     urdf_file = os.path.join(pkg_path, 'urdf', 'murphy.urdf.xacro')
-
+    world_file = os.path.join(pkg_path, 'worlds', 'murphy.world')
     robot_desc = xacro.process_file(urdf_file).toxml()
 
     return LaunchDescription([
 
         ExecuteProcess(
-            cmd=['gz', 'sim', '-r', 'empty.sdf'],
-            output='screen'),
+            cmd=['gz', 'sim', '-r', world_file],
+            output='screen'
+        ),
+        
+        Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            arguments=[
+                '0', '0', '0',
+                '0', '0', '0',
+                'base_link',
+                'murphy/base_link/lidar'
+            ],
+            parameters=[{'use_sim_time': True}],
+            output='screen'
+        ),
 
         Node(
             package='robot_state_publisher',
@@ -69,7 +83,7 @@ def generate_launch_description():
             arguments=[
                 '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
                 '/scan@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan',
-                '/imu@sensor_msgs/msg/Imu@gz.msgs.IMU',
+                '/imu@sensor_msgs/msg/Imu[gz.msgs.IMU',
                 '/tf@tf2_msgs/msg/TFMessage@gz.msgs.Pose_V'
             ],
             parameters=[{'use_sim_time': True}],
@@ -81,6 +95,14 @@ def generate_launch_description():
             executable='ekf_node',
             name='ekf_filter_node',
             parameters=[os.path.join(pkg_path, 'config', 'ekf.yaml')],
+            output='screen'
+        ),
+        
+        Node(
+            package='slam_toolbox',
+            executable='sync_slam_toolbox_node',
+            name='slam_toolbox',
+            parameters=[os.path.join(pkg_path, 'config', 'slam.yaml')],
             output='screen'
         ),
 
